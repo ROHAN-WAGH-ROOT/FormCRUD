@@ -1,0 +1,183 @@
+.Main {
+	border: 1px solid #aaa;
+	width: auto;
+	min-width: fit-content;
+	height: auto;
+	min-height: 560px;
+	padding: 2px;
+	margin: 10px;
+}
+.title {
+	font: 100;
+	font-size: 25px;
+	font-family: fantasy, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 900;
+	font-stretch: extra-condensed;
+	text-align: left;
+	margin: 30px;
+	border-bottom: 2px solid rgb(207, 202, 202);
+	padding: 10px;
+}
+.labels {
+	width: 121px;
+	margin: auto;
+}
+.containerFirst {
+	flex: 1;
+}
+.nameInput {
+	border: 2px solid #aaa;
+	width: 50%;
+	padding: 10px;
+	margin: 10px;
+}
+.nameInput:hover {
+	border-color: rgb(6, 2, 238);
+}
+
+.dateInput {
+	border: 2px solid #aaa;
+	width: 50%;
+	padding: 10px;
+	margin: 10px;
+}
+.dateInput:hover {
+	border-color: rgb(6, 2, 238);
+}
+.containerGenderAddress {
+	display: inline-flex;
+}
+.genderContainer {
+	display: inline-flex;
+	margin: 10px;
+	padding: 20px 10px 25px 0px;
+	border: 1px solid #aaa;
+}
+.genderInput {
+	padding: 20px;
+}
+.addressInput {
+	border: 2px solid #aaa;
+	width: 100%;
+	padding: 10px;
+	margin: 10px;
+}
+.addressInput:hover {
+	border-color: rgb(6, 2, 238);
+}
+.buttonContainer {
+	margin: 20px;
+}
+.buttonAdd {
+	background-color: rgba(6, 230, 136, 0.87);
+	border: 2px solid white;
+	padding: 10px;
+	font-size: large;
+	font-weight: 700;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	margin-right: 40px;
+}
+.buttonSubmit {
+	background-color: rgba(6, 230, 136, 0.87);
+	border: 2px solid white;
+	padding: 10px;
+	font-size: x-large;
+	font-weight: 700;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+}
+.buttonCancel {
+	background-color: rgb(112, 110, 110);
+	border: 2px solid white;
+	padding: 10px;
+	color: white;
+	font-size: x-large;
+	font-weight: 700;
+	cursor: pointer;
+}
+.checkboxContainer {
+	display: inline-flex;
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid #aaa;
+}
+.editButton {
+	border: none;
+	background-color: transparent;
+}
+.deleteButton {
+	border: none;
+	background-color: transparent;
+}
+.searchInput {
+	border: 2px solid #aaa;
+	width: 30%;
+	padding: 10px;
+	margin: 10px;
+}
+.searchButton {
+	width: auto;
+	height: auto;
+	padding: 10px;
+	background-color: blue;
+	color: white;
+	border: none;
+}
+.editIcon {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	padding: 0px;
+	margin: 5px;
+}
+.editIcon:hover + .hoverEdit {
+	visibility: visible;
+}
+.hoverEdit {
+	visibility: hidden;
+	width: 50px;
+	background-color: rgb(38, 7, 214);
+	color: #fff;
+	margin-left: 10px;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+}
+
+.deleteIcon {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	padding: 0px;
+	margin: 5px;
+	margin-left: 20px;
+}
+.deleteIcon:hover + .hoverDelete {
+	visibility: visible;
+}
+.hoverDelete {
+	visibility: hidden;
+	width: 50px;
+	background-color: rgb(38, 7, 214);
+	color: #fff;
+	margin-left: 10px;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+}
+@media only screen and (max-width: 600px) {
+	.genderContainer {
+		margin-left: 5%;
+	}
+}
