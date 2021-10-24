@@ -25,18 +25,18 @@ export default function Form(props) {
 		return () => (mounted = false);
 	}, []);
 	const handleGet = async () => {
-		const res = await axios.get(`http://localhost:5001/users`);
+		const res = await axios.get(`https://nodeexpressapiforms.herokuapp.com/users`);
 		setData(res.data);
 	};
 
 	const handleSubmit = async () => {
 		const data = { name, gender, date, collage, address, hobbies };
 		if (editId === '') {
-			await axios.post(`http://localhost:5001/users`, data);
+			await axios.post(`https://nodeexpressapiforms.herokuapp.com/users`, data);
 			handleGet();
 			handleReset();
 		} else {
-			await axios.patch(`http://localhost:5001/users/` + editId, data);
+			await axios.patch(`https://nodeexpressapiforms.herokuapp.com/users/` + editId, data);
 			handleGet();
 			handleReset();
 		}
@@ -53,7 +53,7 @@ export default function Form(props) {
 		setHobbies(newData.hobbies);
 	};
 	const deleteHandler = async (id) => {
-		await axios.delete(`http://localhost:5001/users/` + id).then(() => {
+		await axios.delete(`https://nodeexpressapiforms.herokuapp.com//` + id).then(() => {
 			const deleteUser = data.filter((obj) => obj._id !== id);
 			handleGet();
 			setData(deleteUser);
@@ -74,7 +74,7 @@ export default function Form(props) {
 	};
 	const handleSearch = async (e) => {
 		e.preventDefault();
-		await axios.get(`http://localhost:5001/search/` + search).then((res) => {
+		await axios.get(`https://nodeexpressapiforms.herokuapp.com/search/` + search).then((res) => {
 			// console.log(res.data);
 			setData(res.data);
 		});
