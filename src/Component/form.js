@@ -72,12 +72,10 @@ export default function Form(props) {
 	const searches = (e) => {
 		setSearch(e.target.value);
 	};
-	const handleSearch = async (e) => {
+	const handleSearch = (e) => {
 		e.preventDefault();
-		await axios.get(`http://localhost:5001/search/` + search).then((res) => {
-			// console.log(res.data);
-			setData(res.data);
-		});
+		const searched = data.find((obj) => obj.name === search);
+		console.log(searched);
 	};
 	const handleTable = () => {
 		return (
